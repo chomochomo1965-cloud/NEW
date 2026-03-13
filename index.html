@@ -92,9 +92,9 @@ cursor:pointer;
 <button onclick="scratch(this)">❔</button>
 </div>
 
-<div id="message">どれを開けますか？</div>
+<div id="message">どのカ－ドを開けますか？</div>
 
-<button id="resetBtn" onclick="resetGame()">もう一回挑戦（シャッフル）</button>
+<button id="resetBtn" onclick="resetGame()">シャッフルやり直し</button>
 
 <script>
 
@@ -258,12 +258,12 @@ document.getElementById("modeBtn").innerText=
 
 if(mode===1){
 document.getElementById("modeBtn").innerText=
-"モード切替（現在：数字1～6）";
+"モード切替（数字の1～6を決めます）";
 }
 
 if(mode===2){
 document.getElementById("modeBtn").innerText=
-"どのマスでもいいので選んでね";
+"どのカードでもいいので選んでね";
 }
 
 }
@@ -290,3 +290,4 @@ resetGame();
 
 </body>
 </html>
+
