@@ -81,6 +81,8 @@ cursor:pointer;
 
 <h1>🎯 西のくじ引き 🎯</h1>
 
+<div id="message">モードを選んでね</div>
+
 <button id="modeBtn" onclick="switchMode()">モード切替</button>
 
 <div class="button-grid">
@@ -92,7 +94,6 @@ cursor:pointer;
 <button onclick="scratch(this)">❔</button>
 </div>
 
-<div id="message">どれか選んで！</div>
 
 <button id="resetBtn" onclick="resetGame()">シャッフルやり直し</button>
 
@@ -243,7 +244,7 @@ b.style.background="#fff";
 b.disabled=false;
 });
 
-document.getElementById("message").innerText="どれかを選んでね！";
+document.getElementById("message").innerText="モードを選んでね";
 
 updateModeText();
 
@@ -263,7 +264,7 @@ document.getElementById("modeBtn").innerText=
 
 if(mode===2){
 document.getElementById("modeBtn").innerText=
-"モード切替（ル－レット）";
+"モード切替（ルーレット）";
 }
 
 }
@@ -290,8 +291,6 @@ resetGame();
 
 </body>
 </html>
-
-
 
 
 
