@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>🎯 西のくじ引き 🎯</title>
+<title>🎯 スクラッチくじ 🎯</title>
 
 <style>
 
@@ -79,9 +79,7 @@ cursor:pointer;
 
 <body>
 
-<h1>🎯 西のくじ引き 🎯</h1>
-
-<div id="message">モードを選んでね</div>
+<h1>🎯 スクラッチくじ 🎯</h1>
 
 <button id="modeBtn" onclick="switchMode()">モード切替</button>
 
@@ -94,8 +92,9 @@ cursor:pointer;
 <button onclick="scratch(this)">❔</button>
 </div>
 
+<div id="message">どれを開けますか？</div>
 
-<button id="resetBtn" onclick="resetGame()">シャッフルやり直し</button>
+<button id="resetBtn" onclick="resetGame()">もう一回挑戦（シャッフル）</button>
 
 <script>
 
@@ -154,7 +153,7 @@ btn.style.background="#fff0f0";
 btn.disabled=true;
 
 document.getElementById("message").innerText=
-"あなたは "+numbers[index]+"です";
+"あなたは "+numbers[index]+" 番目です";
 
 if(Array.from(buttons).every(b=>b.disabled)){
 gameOver=true;
@@ -204,7 +203,7 @@ buttons.forEach(b=>b.style.background="#fff");
 buttons[winner].style.background="#ff9999";
 
 document.getElementById("message").innerText=
-"当たりは "+persons[winner]+"さん";
+"担当者は "+persons[winner]+" さん";
 
 gameOver=true;
 
@@ -244,7 +243,7 @@ b.style.background="#fff";
 b.disabled=false;
 });
 
-document.getElementById("message").innerText="モードを選んでね";
+document.getElementById("message").innerText="どれを開けますか？";
 
 updateModeText();
 
@@ -254,17 +253,17 @@ function updateModeText(){
 
 if(mode===0){
 document.getElementById("modeBtn").innerText=
-"モード切替（スクラッチ）";
+"モード切替（現在：当たりくじ）";
 }
 
 if(mode===1){
 document.getElementById("modeBtn").innerText=
-"モード切替（数字を決めます）";
+"モード切替（現在：数字1～6）";
 }
 
 if(mode===2){
 document.getElementById("modeBtn").innerText=
-"モード切替（ルーレット）";
+"モード切替（現在：担当者ルーレット）";
 }
 
 }
