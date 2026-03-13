@@ -92,7 +92,7 @@ cursor:pointer;
 <button onclick="scratch(this)">❔</button>
 </div>
 
-<div id="message">どのカ－ドを開けますか？</div>
+<div id="message">どれか選んで！</div>
 
 <button id="resetBtn" onclick="resetGame()">シャッフルやり直し</button>
 
@@ -153,7 +153,7 @@ btn.style.background="#fff0f0";
 btn.disabled=true;
 
 document.getElementById("message").innerText=
-"あなたは "+numbers[index]+" 番目です";
+"あなたは "+numbers[index]+"です";
 
 if(Array.from(buttons).every(b=>b.disabled)){
 gameOver=true;
@@ -290,4 +290,5 @@ resetGame();
 
 </body>
 </html>
+
 
