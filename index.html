@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>🎯 スクラッチくじ 🎯</title>
+<title>🎯 西のスクラッチ 🎯</title>
 
 <style>
 
@@ -79,7 +79,7 @@ cursor:pointer;
 
 <body>
 
-<h1>🎯 スクラッチくじ 🎯</h1>
+<h1>🎯 西のスクラッチ 🎯</h1>
 
 <button id="modeBtn" onclick="switchMode()">モード切替</button>
 
@@ -203,7 +203,7 @@ buttons.forEach(b=>b.style.background="#fff");
 buttons[winner].style.background="#ff9999";
 
 document.getElementById("message").innerText=
-"担当者は "+persons[winner]+" さん";
+"当たりは "+persons[winner]+" さん";
 
 gameOver=true;
 
@@ -243,7 +243,7 @@ b.style.background="#fff";
 b.disabled=false;
 });
 
-document.getElementById("message").innerText="どれを開けますか？";
+document.getElementById("message").innerText="どれか選んで？";
 
 updateModeText();
 
@@ -253,17 +253,17 @@ function updateModeText(){
 
 if(mode===0){
 document.getElementById("modeBtn").innerText=
-"モード切替（現在：当たりくじ）";
+"モード切替　（当たりをきめるよ🎵）";
 }
 
-if(mode===1){
+if(mode===1)　{
 document.getElementById("modeBtn").innerText=
-"モード切替（現在：数字1～6）";
+"モード切替（順番をきめるよ♪）";
 }
 
 if(mode===2){
 document.getElementById("modeBtn").innerText=
-"モード切替（現在：担当者ルーレット）";
+"モード切替（誰になるかな？）";
 }
 
 }
